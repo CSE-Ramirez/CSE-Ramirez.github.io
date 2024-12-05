@@ -1,91 +1,97 @@
 body {
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
 }
 
 h1 {
     text-align: center;
-    color: rgb(150, 5, 5);
+    color: #73000A;
+    margin: 20px 0;
 }
-   
+
 h2 {
     text-align: left;
-    color:rgb(196, 12, 42);
+    color: #73000A;
+    margin: 10px 20px;
 }
 
 .projects {
     display: flex;
-    flex-wrap: wrap; 
-    gap: 20px; 
-    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .project {
     width: calc(33.33% - 20px);
-    background: maroon;
+    background-color: #73000A;
+    color: white;
     border-radius: 10px;
-    padding: 20px 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .project img {
     width: 100%;
-    height: auto; 
-    border: 2px solid blueviolet;
-    display: block;
-    margin: auto; 
+    height: auto;
+    border-bottom: 2px solid black;
 }
 
-    a { 
-        text-decoration: none;
-        color: purple;
-        }
-        .project p { 
-        text-align: center;
-        margin: 15px;
-        }
-
-        .about
-        {
-            display:flex;
-            flex-wrap:wrap;
-            margin-right: 100px;
-            margin-left: 100px;
-            justify-content: center;
-            }
-
-            .about p
-             {
-            width:50%;
-            text-align: center;
-            margin: auto;
-            line-height: 125%;
-            }
-
-            .about img
-             {
-            width: 150px;
-            height: 200px;
-            border-radius: 25%;
-            border: 2px solid rgb(126, 14, 201);
-            }
-.projects {
-display: flex;
-flex-wrap: wrap;
-gap: 20px; /* Adds space between images */
-justify-content: center; /* Centers content within the container */
+.project p {
+    text-align: center;
+    margin: 15px;
+    font-size: 1rem;
+    line-height: 1.5;
 }
-            
-.project {
-width: 30%; /* Controls the width of each project section */
-margin: 10px;
-padding: 20px 10px;
-background: maroon;
-border-radius: 10px; /* Optional: rounds corners */
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
-            
-.project img {
-width: 100%; /* Ensures the image fits within the project container */
-height: auto; /* Maintains aspect ratio */
-border: 2px solid blueviolet;
-display: block;
- }       
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.about p {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    line-height: 1.5;
+}
+
+.about img {
+    width: 150px;
+    height: 200px;
+    border-radius: 25%;
+    border: 2px solid #73000A;
+}
+
+@media (max-width: 768px) {
+    .project {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        width: calc(100% - 20px);
+    }
+}
